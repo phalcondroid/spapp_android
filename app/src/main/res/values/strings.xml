@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">Spapp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_menu">Menú</string>
+    <string name="title_activity_booking">Reserva</string>
+    <string name="title_activity_trainer">Entrenador</string>
+    <string name="title_activity_summary">Resument de solicitud</string>
+    <string name="title_activity_rating">Ayúdanos a mejorar</string>
+    <string name="title_activity_first_register">Información perosonal</string>
+    <string name="title_activity_detail_service">Detalles del servicio</string>
+    <string name="title_activity_our_personal">Nuestro personal</string>
+
+
+</resources>
