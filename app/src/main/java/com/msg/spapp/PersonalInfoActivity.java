@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import Entities.PersonalData;
+
 public class PersonalInfoActivity extends AppCompatActivity
         implements View.OnClickListener {
 
@@ -33,7 +35,9 @@ public class PersonalInfoActivity extends AppCompatActivity
 
         switch (v.getId()) {
             case R.id.btn_save:
-
+                    PersonalData config = new PersonalData();
+                    config.setFirstData(true);
+                    config.save();
                 break;
             case R.id.btn_facebook:
 

@@ -110,9 +110,12 @@ public class SplashActivity extends FragmentActivity {
                                     config.setUuid(uuid);
                                     config.save();
 
-                                    if (PersonalData.findById(PersonalData.class, 1).getFirstData()) {
+                                    try {
+
+                                        PersonalData.findById(PersonalData.class, 1).getFirstData();
                                         intent = new Intent(SplashActivity.this, ServicesActivity.class);
-                                    } else {
+
+                                    } catch (NullPointerException e) {
                                         intent = new Intent(SplashActivity.this, PersonalInfoActivity.class);
                                     }
 
