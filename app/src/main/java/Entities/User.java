@@ -8,10 +8,9 @@ import com.orm.SugarRecord;
 public class User extends SugarRecord {
 
     private Long id;
-    private String uuid;
-    private String user_id;
+    private String userId;
     private String name;
-    private String last_name;
+    private String lastName;
     private String phone;
     private String email;
     private String image;
@@ -29,20 +28,12 @@ public class User extends SugarRecord {
         this.id = id;
     }
 
-    public String getUuid() {
-        return uuid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
-    }
-
-    public String getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String user_id) {
+        this.userId = user_id;
     }
 
     public String getName() {
@@ -53,12 +44,12 @@ public class User extends SugarRecord {
         this.name = name;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String last_name) {
+        this.lastName = last_name;
     }
 
     public String getPhone() {

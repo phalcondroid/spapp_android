@@ -11,6 +11,7 @@ import android.util.Log;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.msg.spapp.R;
 
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -22,8 +23,7 @@ import interfaces.ISession;
  */
 public class GoogleCloudMsj {
 
-    public static final String EXTRA_MESSAGE = "messagess";
-    public static final String PROPERTY_REG_ID = "AIzaSyCwqQA2RSSghjtKpvC6wOTbjTIjKUcDkwM";
+    public static String PROPERTY_REG_ID = "";
     private static final String PROPERTY_APP_VERSION = "appVersion";
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
@@ -31,7 +31,7 @@ public class GoogleCloudMsj {
      * Substitute you own sender ID here. This is the project number you got
      * from the API Console, as described in "Getting Started."
      */
-    String SENDER_ID = "103044582147";
+    String SENDER_ID = "";
     GoogleCloudMessaging gcm;
     String regid;
     AtomicInteger msgId = new AtomicInteger();
@@ -39,9 +39,13 @@ public class GoogleCloudMsj {
     Context context;
     static final String TAG = "GoogleCloudMsj";
 
-    public GoogleCloudMsj(Context cntx) {
-        activity = (FragmentActivity) cntx;
-        context = cntx;
+    public GoogleCloudMsj(Context ctx) {
+        activity = (FragmentActivity) ctx;
+        context = ctx;
+
+        this.SENDER_ID = context.getString(R.string.sender_id);
+        this.PROPERTY_REG_ID = context.getString(R.string.google_play_key);
+
         // Check device for Play Services APK. If check succeeds, proceed with GCM registration.
         if (checkPlayServices()) {
             gcm = GoogleCloudMessaging.getInstance(context);
@@ -116,7 +120,6 @@ public class GoogleCloudMsj {
                     }
                     regid = gcm.register(SENDER_ID);
                     storeRegistrationId(context, regid);
-                    Log.e("regid", regid);
 
                 } catch (IOException ex) {
 

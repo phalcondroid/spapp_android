@@ -4,5 +4,10 @@
     <string name="spapp_key">julian123</string>
     <string name="server_url">http://52.25.92.85/</string>
     <string name="enviroment_name">/spapp/</string>
+    <string name="internet_error">Error de conexión</string>
+    <string name="internet_error_msj">Comprueba tu conexión a internet, plan de datos o wifi.</string>
+    <string name="no_uuid">No de pudo obtener conexión con google.</string>
+    <string name="sender_id">309685259935</string>
+    <string name="google_play_key">AIzaSyDzTUs5lE4knHyikpmUoqkeR1FzUzBgs98</string>
 
 </resources>

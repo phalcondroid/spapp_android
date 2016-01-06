@@ -19,11 +19,17 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import Entities.Google;
+import Entities.PersonalData;
 import Libraries.CustomRequest;
 import Entities.Service;
+import Libraries.GoogleCloudMsj;
+import Libraries.Internet;
+import interfaces.ISession;
 
 public class SplashActivity extends FragmentActivity {
 
+    private GoogleCloudMsj gcmCustom;
     private Intent intent;
 
     @Override
@@ -36,6 +42,38 @@ public class SplashActivity extends FragmentActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_splash);
+
+        if (Internet.validar(this)) {
+            this.gcmCustom = new GoogleCloudMsj(this);
+            this.gcmCustom.checkPlayServices();
+            this.gcmCustom.registerInBackground(new ISession() {
+                @Override
+                public void onPreExecute() {
+
+                }
+
+                @Override
+                public String doInBackground() {
+                    return null;
+                }
+
+                @Override
+                public void onPostExecute(String result) {
+
+                   getDataConfig(result);
+
+                }
+            });
+        }
+    }
+
+    /**
+     *
+     * @param uuid
+     */
+    public void getDataConfig(final String uuid) {
+
+        Log.e("uuid", uuid);
 
         Service.deleteAll(Service.class);
 
@@ -68,7 +106,16 @@ public class SplashActivity extends FragmentActivity {
 
                                     }
 
-                                    intent = new Intent(SplashActivity.this, ServicesActivity.class);
+                                    Google config = new Google();
+                                    config.setUuid(uuid);
+                                    config.save();
+
+                                    if (PersonalData.findById(PersonalData.class, 1).getFirstData()) {
+                                        intent = new Intent(SplashActivity.this, ServicesActivity.class);
+                                    } else {
+                                        intent = new Intent(SplashActivity.this, PersonalInfoActivity.class);
+                                    }
+
                                     startActivity(intent);
 
                                 } catch (JSONException e) {
@@ -96,6 +143,11 @@ public class SplashActivity extends FragmentActivity {
         CustomRequest.MySingleton.getInstance(this)
                 .addToRequestQueue(request);
 
-
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
 }

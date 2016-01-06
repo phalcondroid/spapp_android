@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.msg.spapp.R;
+
 /**
  * Created by Julián Molina
  */
@@ -41,14 +43,15 @@ public class Internet {
     public static AlertDialog.Builder buildDialog(Context c) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(c);
-        builder.setTitle("Connection error.");
-        builder.setMessage("You haven't internet connection");
+        builder.setTitle(c.getString(R.string.internet_error));
+        builder.setMessage(c.getString(R.string.internet_error_msj));
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
+
         });
 
         return builder;

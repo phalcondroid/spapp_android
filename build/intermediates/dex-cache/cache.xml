@@ -2,18 +2,207 @@
 <items version="2" >
 
     <item
-        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.github.satyan/sugar/1.4/jars/classes.jar"
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="ac045b53684345f4ec8468477e8fc5034d0d2bfd">
-        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-2124d302c7edea23288ac9a838278955a837f4e9.jar" />
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-5d3f84fb6e92141a24a475ab740815147f1c58c7.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-a1b4dce5219521f9ce62d455c90abd75962ffea3.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3178362320bcf51228835b60ff978efadfd1f783">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-45eea34982c29f8e791eba9a2101249b8032d25d.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-96b4c18033a9e67d9f77e89ae65cac042bd7bf2b.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-ab013268b523124260176a3df6c350364d8c4351.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-1876055637a3a67bcd316aef0d723ed0d35ebfb2.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-bb1659d8d2c35c3346b9de7768de16194deb11d1.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-4ed29cb4fed113383e0179614d29a7b19858144c.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-ce6e105991ecd386b720392e8d4991778ebf7f12.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="17449c47df35c754b257532052f1270c444f7993">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-9b88b9bebddd5e6e840f867797b019f851d1ad91.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-e00f46b26df9be2f6da9cbb3185d26df620b2fa4.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="95758a2905669affbffc5ddd262921d375674fad">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-120ae2cf9367a338148ac75af5bebb104a181a97.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-8d1ef71690e37d78dbd070d64656aaf441123073.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3b05c18f60969ecc2ba49c0409c4b96be2d9cb0c">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-9ff7476c7369a33c6c57304330f6336a411d865c.jar" />
     </item>
     <item
         jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/spapp_android/volley/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="f2442ce19c48b65d3531e89b77d9bbc98a402e51">
+        sha1="9b4c735f54fa2065dea066550c2357189c1f23f7">
         <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-a8895951bd22bb6ed7cc979e70bd02ce4d12e4ca.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-38be4a5d51cb19313b1c40507e9a9c8ac281fe40.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-d981ad34f24dbe407d0bab83fbe5b0b4f074da69.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-5d3b869f9f60158f011e624f09cf875fa220996b.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="482de223655d06253cc6a4955d653f8994169500">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-c5cba3358d579a0e2abcb5fe2bc6e53b9823c9fd.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-95a1fae2078b2669785f3eb927706ad157294641.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-06a7ade7d3f867322b827c3b304dc83a1db43da0.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="997773777cf3904c11d6764fe3b7668538220e49">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-f8ef701a322fd5f7e7d94817c73476ff1da7f4f1.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-ae6e40b0e14620f80fc8c12afac9e7e2400ab776.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-6ad5ffdffff2de388526993f5216765343d9b4cf.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-a45093f7a01ba5aeaf7f87ea91ef3703397a88dd.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-ee196a76dc303c299c60c459700e53a0d27e7cb6.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-320cdc6f406a0904b7d3db4b3bbfdf4e02348836.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-fcbd14a5d303b872d5328b1620504beac96addda.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-7197a012cae59ca5ba765ec0c75a399efba59a76.jar" />
     </item>
     <item
         jar="/Users/julianmolina/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"
@@ -21,6 +210,13 @@
         revision="23.0.1"
         sha1="cce0823396aa693798f8882e64213b1772032b09">
         <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/guava-18.0-756940bc8717c50c982c21c47406d14e54233b66.jar" />
+    </item>
+    <item
+        jar="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/exploded-aar/com.github.satyan/sugar/1.4/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ac045b53684345f4ec8468477e8fc5034d0d2bfd">
+        <dex dex="/Users/julianmolina/Documents/android-workspace/spapp_android/app/build/intermediates/pre-dexed/debug/classes-2124d302c7edea23288ac9a838278955a837f4e9.jar" />
     </item>
 
 </items>
