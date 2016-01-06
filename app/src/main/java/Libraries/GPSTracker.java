@@ -12,8 +12,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
 
-public class GPSTracker extends Service
-        implements LocationListener {
+public class GPSTracker extends Service implements LocationListener {
 
     private final Context mContext;
 
@@ -33,13 +32,12 @@ public class GPSTracker extends Service
 
     protected LocationManager locationManager;
 
-    public GPSTracker(Context context, Boolean ui) {
+    public GPSTracker(Context context) {
         this.mContext = context;
-        getLocation(ui);
+        getLocation();
     }
 
-    public Location getLocation(Boolean ui) {
-
+    public Location getLocation() {
         try {
 
             locationManager = (LocationManager) mContext.getSystemService(LOCATION_SERVICE);
@@ -49,10 +47,7 @@ public class GPSTracker extends Service
             isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
             if (!isGPSEnabled && !isNetworkEnabled) {
-
-                if (ui)
-                    showSettingsAlert();
-
+                showSettingsAlert();
             } else {
 
                 this.canGetLocation = true;
@@ -71,9 +66,8 @@ public class GPSTracker extends Service
                             longitude = location.getLongitude();
                         }
                     }
-                } else {
-                    if (ui)
-                        showSettingsAlert();
+                }else{
+                    showSettingsAlert();
                 }
                 // If GPS enabled, get latitude/longitude using GPS Services
                 if (isGPSEnabled) {
@@ -92,19 +86,14 @@ public class GPSTracker extends Service
                             }
                         }
                     }
-
-                } else {
-
-                    if (ui)
-                        showSettingsAlert();
+                }else{
+                    showSettingsAlert();
                 }
             }
         }
         catch (Exception e) {
-
-            if (ui)
-                showSettingsAlert();
-
+            showSettingsAlert();
+            e.printStackTrace();
         }
 
         return location;

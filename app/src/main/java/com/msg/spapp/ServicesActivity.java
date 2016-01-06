@@ -2,44 +2,42 @@ package com.msg.spapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
-
+import java.util.List;
 import Adapter.ServiceAdapter;
-import Models.Service;
+import Entities.Service;
 
 public class ServicesActivity extends AppCompatActivity {
 
     private ListView listServices;
-    private ArrayList<Service> listItems =
-            new ArrayList();
+    private List<Service> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
 
-        Service service = new Service();
-        service.setName("Entrenamiento GYM");
-        service.setDescription("Biceps, triceps, cardio, pesas, trx");
-
-        Service service2 = new Service();
-        service2.setName("Zumba");
-        service2.setDescription("Conviertete en el mejor bailarin de zumba");
-
-        Service service3 = new Service();
-        service3.setName("Fighting combat");
-        service3.setDescription("Calses de cardio en fighting");
-
-        listItems.add(service);
-        listItems.add(service2);
-        listItems.add(service3);
+        list = Service.listAll(Service.class);
 
         listServices = (ListView) findViewById(R.id.listServices);
-        listServices.setAdapter(new ServiceAdapter(this, listItems));
+        listServices.setAdapter(new ServiceAdapter(this, list));
+        listServices.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Service service = (Service) adapterView.getItemAtPosition(i);
+
+                Toast.makeText(ServicesActivity.this, service.getName(), Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
     }
 
     @Override

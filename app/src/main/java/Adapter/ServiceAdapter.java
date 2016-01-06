@@ -5,13 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.msg.spapp.R;
 
 import java.util.List;
 
-import Models.Service;
+import Entities.Service;
 
 /**
  * Created by julianmolina on 29/12/15.
@@ -53,6 +54,9 @@ public class ServiceAdapter extends BaseAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             rowView = inflater.inflate(R.layout.list_service, parent, false);
         }
+
+        LinearLayout dad = (LinearLayout) rowView.findViewById(R.id.lyDad);
+        dad.setBackgroundResource(rowView.getResources().getIdentifier(service.getImage(), "drawable", context.getPackageName()));
 
         TextView title = (TextView) rowView.findViewById(R.id.service_title);
         title.setText(service.getName());

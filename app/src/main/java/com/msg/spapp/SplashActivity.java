@@ -4,14 +4,27 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
+import android.widget.Toast;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import Libraries.CustomRequest;
+import Entities.Service;
 
 public class SplashActivity extends FragmentActivity {
 
-    private static final long SPLASH_SCREEN_DELAY = 3000;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,20 +37,65 @@ public class SplashActivity extends FragmentActivity {
 
         setContentView(R.layout.activity_splash);
 
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
+        Service.deleteAll(Service.class);
 
-                // Start the next activity
-                Intent intent = new Intent(SplashActivity.this, PersonalInfoActivity.class);
-                startActivity(intent);
+        Map<String, String> params =
+                new HashMap<String, String>();
 
-                finish();
-            }
-        };
+        params.put("key", getString(R.string.spapp_key));
+        params.put("platform", "android");
 
-        // Simulate a long loading process on application startup.
-        Timer timer = new Timer();
-        timer.schedule(task, SPLASH_SCREEN_DELAY);
+        CustomRequest request =
+                new CustomRequest(Request.Method.POST, CustomRequest.getURL(this, "api", "general"), params,
+                        new Response.Listener<JSONObject>() {
+
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                try {
+
+                                    JSONArray data = response.getJSONArray("data");
+                                    for (int i = 0; i < data.length(); i++) {
+
+                                        JSONObject item = data.optJSONObject(i);
+
+                                        Service service = new Service();
+                                        service.setId(Long.parseLong(item.getString("id")));
+                                        service.setName(item.getString("name"));
+                                        service.setDescription(item.getString("description"));
+                                        service.setImage(item.getString("image"));
+                                        service.save();
+
+                                    }
+
+                                    intent = new Intent(SplashActivity.this, ServicesActivity.class);
+                                    startActivity(intent);
+
+                                } catch (JSONException e) {
+
+                                    Toast.makeText(SplashActivity.this, getString(R.string.splash_error), Toast.LENGTH_SHORT)
+                                            .show();
+
+                                }
+                            }
+                        },
+                        new Response.ErrorListener() {
+
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+
+                                try {
+                                    Log.e("error", error.getMessage());
+                                } catch (NullPointerException e) {
+                                    Log.e("error", "No se sabe cual es el error");
+                                }
+                            }
+                        }
+                );
+
+        CustomRequest.MySingleton.getInstance(this)
+                .addToRequestQueue(request);
+
+
     }
 }

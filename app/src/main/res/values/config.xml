@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="spapp_key">julian123</string>
+    <string name="server_url">http://52.25.92.85/</string>
+    <string name="enviroment_name">/spapp/</string>
+
+</resources>
