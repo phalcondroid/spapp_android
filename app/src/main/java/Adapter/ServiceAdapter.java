@@ -13,6 +13,7 @@ import com.msg.spapp.R;
 import java.util.List;
 
 import Entities.Service;
+import Entities.ServiceCategory;
 
 /**
  * Created by julianmolina on 29/12/15.

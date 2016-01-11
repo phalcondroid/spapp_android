@@ -1,14 +1,13 @@
 package com.msg.spapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.List;
 import Adapter.ServiceAdapter;
@@ -18,6 +17,8 @@ public class ServicesActivity extends AppCompatActivity {
 
     private ListView listServices;
     private List<Service> list;
+    private Intent intent;
+    private Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +34,19 @@ public class ServicesActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 Service service = (Service) adapterView.getItemAtPosition(i);
+                bundle = new Bundle();
+                bundle.putString("service_id", String.valueOf(service.getIdService()));
+                intent = new Intent(ServicesActivity.this, ServiceCategoriesActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
 
-                Toast.makeText(ServicesActivity.this, service.getName(), Toast.LENGTH_SHORT)
-                        .show();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
     @Override

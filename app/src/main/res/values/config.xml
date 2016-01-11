@@ -9,5 +9,6 @@
     <string name="no_uuid">No de pudo obtener conexión con google.</string>
     <string name="sender_id">309685259935</string>
     <string name="google_play_key">AIzaSyDzTUs5lE4knHyikpmUoqkeR1FzUzBgs98</string>
+    <string name="save">Guardar</string>
 
 </resources>

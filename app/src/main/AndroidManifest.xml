@@ -20,19 +20,26 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name="com.orm.SugarApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name="com.orm.SugarApp"
         android:theme="@style/AppTheme" >
-
-        <meta-data android:name="DATABASE" android:value="spapp.db" />
-        <meta-data android:name="VERSION" android:value="2" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="Entities" />
+        <meta-data
+            android:name="DATABASE"
+            android:value="spapp.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="Entities" />
 
         <activity
-            android:name="com.msg.spapp.SplashActivity"
+            android:name=".SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,36 +48,44 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.msg.spapp.ServicesActivity"
+            android:name=".ServicesActivity"
             android:label="@string/title_activity_menu" >
         </activity>
         <activity
-            android:name="com.msg.spapp.BookingActivity"
+            android:name=".BookingActivity"
             android:label="@string/title_activity_booking" >
         </activity>
         <activity
-            android:name="com.msg.spapp.TrainerActivity"
+            android:name=".TrainerActivity"
             android:label="@string/title_activity_trainer" >
         </activity>
         <activity
-            android:name="com.msg.spapp.SummaryActivity"
+            android:name=".SummaryActivity"
             android:label="@string/title_activity_summary" >
         </activity>
         <activity
-            android:name="com.msg.spapp.RatingActivity"
+            android:name=".RatingActivity"
             android:label="@string/title_activity_rating" >
         </activity>
         <activity
-            android:name="com.msg.spapp.PersonalInfoActivity"
+            android:name=".PersonalInfoActivity"
             android:label="@string/title_activity_first_register" >
         </activity>
         <activity
-            android:name="com.msg.spapp.DetailServiceActivity"
+            android:name=".DetailServiceActivity"
             android:label="@string/title_activity_detail_service" >
         </activity>
         <activity
-            android:name="com.msg.spapp.OurPersonalActivity"
+            android:name=".OurPersonalActivity"
             android:label="@string/title_activity_our_personal" >
+        </activity>
+        <activity
+            android:name=".ServiceCategoriesActivity"
+            android:label="@string/title_activity_service_categories" >
+        </activity>
+        <activity
+            android:name=".DetailCategoryActivity"
+            android:label="@string/title_activity_detail_category" >
         </activity>
     </application>
 

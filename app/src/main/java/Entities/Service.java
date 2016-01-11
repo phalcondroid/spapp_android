@@ -9,6 +9,7 @@ import com.orm.SugarRecord;
 public class Service extends SugarRecord {
 
     private Long id;
+    private int idService;
     private String name;
     private String description;
     private String image;
@@ -48,5 +49,13 @@ public class Service extends SugarRecord {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getIdService() {
+        return idService;
+    }
+
+    public void setIdService(int idService) {
+        this.idService = idService;
     }
 }

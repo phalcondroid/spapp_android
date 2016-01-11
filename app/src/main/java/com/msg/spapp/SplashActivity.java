@@ -21,6 +21,7 @@ import java.util.Map;
 
 import Entities.Google;
 import Entities.PersonalData;
+import Entities.ServiceCategory;
 import Libraries.CustomRequest;
 import Entities.Service;
 import Libraries.GoogleCloudMsj;
@@ -31,6 +32,7 @@ public class SplashActivity extends FragmentActivity {
 
     private GoogleCloudMsj gcmCustom;
     private Intent intent;
+    private Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class SplashActivity extends FragmentActivity {
         setContentView(R.layout.activity_splash);
 
         if (Internet.validar(this)) {
+
             this.gcmCustom = new GoogleCloudMsj(this);
             this.gcmCustom.checkPlayServices();
             this.gcmCustom.registerInBackground(new ISession() {
@@ -73,8 +76,6 @@ public class SplashActivity extends FragmentActivity {
      */
     public void getDataConfig(final String uuid) {
 
-        Log.e("uuid", uuid);
-
         Service.deleteAll(Service.class);
 
         Map<String, String> params =
@@ -98,11 +99,29 @@ public class SplashActivity extends FragmentActivity {
                                         JSONObject item = data.optJSONObject(i);
 
                                         Service service = new Service();
-                                        service.setId(Long.parseLong(item.getString("id")));
+                                        service.setIdService(Integer.parseInt(item.getString("id")));
                                         service.setName(item.getString("name"));
                                         service.setDescription(item.getString("description"));
                                         service.setImage(item.getString("image"));
                                         service.save();
+
+                                        JSONArray jCategories = item.getJSONArray("categories");
+
+                                        for (int j = 0; j < jCategories.length(); j++) {
+
+                                            JSONObject categories = jCategories.getJSONObject(j);
+
+                                            ServiceCategory serviceCategory = new ServiceCategory();
+
+                                            serviceCategory.setIdServiceCategory(Integer
+                                                    .parseInt(categories.getString("id")));
+                                            serviceCategory.setIdService(service.getIdService());
+                                            serviceCategory.setName(categories.getString("name"));
+                                            serviceCategory.setDescription(categories.getString("description"));
+                                            serviceCategory.setImage(categories.getString("image"));
+                                            serviceCategory.save();
+
+                                        }
 
                                     }
 
@@ -116,12 +135,19 @@ public class SplashActivity extends FragmentActivity {
                                         intent = new Intent(SplashActivity.this, ServicesActivity.class);
 
                                     } catch (NullPointerException e) {
+
+                                        bundle = new Bundle();
+                                        bundle.putString("edit", "false");
                                         intent = new Intent(SplashActivity.this, PersonalInfoActivity.class);
+                                        intent.putExtras(bundle);
+
                                     }
 
                                     startActivity(intent);
 
                                 } catch (JSONException e) {
+
+                                    Log.e("interné", e.getMessage());
 
                                     Toast.makeText(SplashActivity.this, getString(R.string.splash_error), Toast.LENGTH_SHORT)
                                             .show();
